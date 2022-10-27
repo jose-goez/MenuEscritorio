@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: cadetblue;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 0, 1) 35%, rgba(0, 0, 0, 1) 100%);
+    border-radius: 3px;
+}
+
+/* ============================================
+responsive design dispositivos de escritorio
+============================================ */
+@media (min-width: 768px) {
+    .header {
+        display: none;
+    }
+
+    .header-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: #000000;
+        color: #ffff00;
+        font-family: sans-serif;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    .header-desktop a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: yellow;
+        font-weight: bolder;
+        margin: 10px;
+        transition: 0.8s;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid;
+    }
+
+    .header-desktop a:hover {
+        color: black;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 0, 1) 35%, rgba(0, 0, 0, 1) 100%);
+        transition: 0.8s;
+    }
+}
+
+/* =======================================
+responsive design dispositivos movibles.
+======================================== */
+@media (max-width:767px) {
+    .header-desktop {
+        display: none;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        height: auto;
+        font-family: sans-serif;
+    }
+
+    main {
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: yellow;
+        background-color: black;
+    }
+
+
+    .botonAbrir {
+        background-color: black;
+        color: aqua;
+        cursor: pointer;
+        display: block;
+        border: none;
+        font-size: 50px;
+    }
+    
+    .botonCerrar {
+        background-color: black;
+        color: aqua;
+        cursor: pointer;
+        display: none;
+        border: none;
+        font-size: 50px;
+
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        line-height: 40px;
+        opacity: 0;
+    }
+
+    .nav a {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: yellow;
+    }
+
+    .nav a:hover {
+        text-decoration: underline;
+    }
+}
